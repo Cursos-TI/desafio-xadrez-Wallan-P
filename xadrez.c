@@ -1,5 +1,37 @@
 #include <stdio.h>
 
+void torre(int n){
+
+
+    if (n > 0){ 
+        
+        printf("direita\n");
+        torre(n-1);
+    };
+
+};
+
+void bispo(int n){
+
+
+    if (n > 0){ 
+        
+        printf("cima, direita\n");
+        bispo(n-1);
+    };
+
+};
+
+void rainha(int n){
+
+
+    if (n > 0){ 
+        
+        printf("esquerda\n");
+        rainha(n-1);
+    };
+
+};
 int main(){
     int i,j=0;
     
@@ -7,33 +39,18 @@ int main(){
 
     printf("movimento da torre\n\n");
 
-    for (int i = 0; i < 5; i++){
-
-        printf("direita\n");
-    };
-
+    torre(5);
 
 
     printf("\n\nmovimento do bispo \n\n");
 
 
-    while ( i < 5){
-
-        printf("cima direita\n");
-        i++;
-    }
-    
-
+   bispo(5);
 
     printf("\n\nmovimento da rainha \n\n");
 
-    do
-    {
-        printf("esquerda\n");
-        j++;
-
-    } while (j<8);
     
+    rainha(8);
     
 
     printf("\n\nmovimento do cavalo \n\n");
